@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Montserrat'
+    
+}
+
+#cursur{
+    height: 25px;
+    width: 25px;
+    background:#95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    pointer-events: none;
+
+
+}
+#cursur-blur{
+    height: 350px;
+    width: 350px;
+    background:#96c11e46;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(50px);
+    z-index: 9;
+    pointer-events: none;
+
+}
+.nav{
+    width: 100vw;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:40px;
+    padding: 15px 100px;
+    padding-right: 0px;
+    position: fixed;
+    z-index: 99;
+   
+}
+.nav img{
+    width: 110px;
+}
+.nav h3{
+    font-weight:500;
+    font-size: large;
+    color: white;
+}
+video {
+  width: 100vw;
+  height: 100vh;
+ object-fit: cover;
+  position: fixed;
+  z-index: -1;
+
+}
+#main{
+position: relative;
+  background-color: rgba(0, 0, 0, 0.37);
+  min-height: 100%;
+}
+#page1{
+    height: 100vh;
+    width: 100vw;
+}
+#page1{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    gap: 20px;
+    text-align: center;
+    z-index: 10;
+}
+#page1 h1{
+   font-size: 110px;
+   font-weight: 900px;
+   position: relative;
+}
+#page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+    top: -4px;
+    bottom: -4px;
+    left: -6px;
+    z-index: -1;
+    -webkit-text-stroke: 2px #95C11E;
+}
+
+#page1 h2{
+    font-size: 28px;
+    font-weight: 900;
+
+}
+
+#page1 p{
+    width: 800px;
+    font-weight: 500px;
+    font-size: larger;
+}
+#page2{
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+}
+#scroller{
+    /* background-color: red; */
+    white-space: nowrap;
+      z-index: 5;
+      overflow-x: auto;
+overflow-y: hidden;
+position: relative;
+z-index: 10;
+    
+}
+
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scroller-in{
+    display: inline-block;
+  white-space: nowrap;  
+  animation-name: scroll;
+  animation-duration: 21s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+}
+
+#scroller-in h4{
+    display: inline-block;
+  white-space: nowrap; 
+  font-size: 80px;
+  font-weight: 900;
+/*  margin-right: 10px; */
+ transition: all linear 0.5s;
+font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: transparent;
+ -webkit-text-stroke : 2px #95C11E;
+ 
+}
+#scroller-in h4:hover{
+    color: #95C11E;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#about-us{
+/*     background-color: #fff; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 50px;
+}
+#about-us img{
+    height: 150px;
+    width: 150px;
+    border-radius: 6px;
+}
+#about-us-in{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+}
+#about-us-in h2{
+    font-size: 40px;
+    font-weight: 900;
+    color: #fff;
+}
+#about-us-in p{
+    font-size: 18px;
+    font-weight: 450;
+    line-height: 27px;
+    object-fit: cover;
+    color: #fff;
+}
+#card-section{
+/*     background-color: red; */
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    z-index: 10;
+}
+.card{
+    height: 80%;
+    width: 23%;
+    border-radius: 10px;
+  /*   background: #000; */
+    background-size: cover;
+    background-position: center;
+      transition: all ease 1s;
+}
+#card1{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+    
+}
+#card2{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1) ;
+}
+#card3{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1) ;
+}
+.overley{
+    border-radius: 10px;
+    height: 100%;
+   padding: 60px 30px;
+   background-color: #95C11E;
+   opacity: 0;
+   transition: all ease 1s;
+    
+}
+
+.overley h4{
+    font-size: x-large;
+   /*  margin-bottom: 30px; */
+    }
+
+.overley:hover{
+    opacity: 1;
+}
+
+.card:hover{
+    transform: rotate3d(-1,1,0.1,20deg);
+}
+#green-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    height: 200px;
+    text-align: center;
+      background: linear-gradient(to left bottom, #119f3a, #ace022);
+      padding: 10px;
+  }
+
+#green-div img{
+
+height: 100%;
+width: 14%;
+object-fit: cover;
+
+}
+#green-div h4{
+    color: #000;
+    font-size: x-large;
+
+}
+#page3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+#colon1{
+    position: absolute;
+    height: 50px;
+    top: 150px;
+    left: 140px;
+}
+#colon2{
+    position: absolute;
+    height: 50px;
+    right: 140px;
+    bottom: 150px;
+    
+}
+#page3 p{
+    color: white;
+    width: 700px;
+    font-size: large;
+    font-weight: 700;
+    line-height: 46px;
+}
+
+#page4{
+    height: 47vh;
+    width: 100%;
+    display: flex;
+   align-items: center;
+    justify-content: space-around;
+     position: relative;
+     padding: 0px 50px;
+}
+#page4 h1{
+  font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+position: absolute;
+top: 0%;
+font-size: 75px;
+font-weight: 900;
+color: transparent;
+-webkit-text-stroke: 2px #fff;
+}
+
+.elem{
+    position: relative;
+    transition: all ease 0.5s;
+  
+}
+.elem img{
+    height: 130px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+    
+
+.elem h2{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: 900;
+   font-size: 30px;
+    color: black;
+background-color: #ace022;
+ border-radius: 10px;
+ z-index: 10;
+ transition: all ease 0.8s;
+
+}
+ .elem:hover h2{
+    
+background-color: transparent;
+color: #fff;
+
+ }
+ .elem:hover{
+    scale: 1.03;
+ }
+ #footer{
+    height: 65vh;
+    width: 100%;
+   background: linear-gradient(to left bottom, #119f3a, #ace022);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    padding: 50px;
+    
+ }
+ 
+ #logo img{
+    position: absolute;
+    width: 110px;
+    top: 20%;
+    left: 100px;
+ }
+ 
+
+#detail{
+ line-height: 38px;
+}
+#detail h2{
+    font-weight: 900;
+}
+#detail:hover h2{
+    color: #fff;
+}
+#address p{
+  width: 100px;
+}
+#address :hover{
+color: #fff;
+}
+#footer-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 50px;
+    padding-left: 100px;
+}
+#footer h5{
+    font-size: medium;
+    font-weight: 400;
+}
+#footer:hover h5{
+    color: #fff;
+}
